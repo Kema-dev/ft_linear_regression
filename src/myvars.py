@@ -1,8 +1,8 @@
 THETA_LOCATION = '../data/vars.csv'
 BACKUP_LOCATION = '../data/vars.csv.backup'
 
-theta0 = 0
-theta1 = 0
+theta0 = 0.0
+theta1 = 0.0
 
 class TooManyRows(Exception()):
     """Theta values file has more than 1 row"""
@@ -21,6 +21,7 @@ def init(new):
 				theta0 = 0
 				theta1 = 0
 				print('Theta file initialized')
+				return theta0, theta1
 		except:
 			print('Error during initialization of theta values')
 	else:
@@ -30,7 +31,10 @@ def init(new):
 			file = open(THETA_LOCATION, "w+")
 			file.write('0,0')
 			file.close()
+			theta0 = 0
+			theta1 = 0
 			print('File didn\'t exist, created and initialized it')
+			return theta0, theta1
 			return
 		text = file.read()
 		try:
@@ -40,8 +44,8 @@ def init(new):
 				raise TooManyRows
 			else:
 				val = text.split(',')
-				theta0 = int(val[0])
-				theta1 = int(val[1])
+				theta0 = float(val[0])
+				theta1 = float(val[1])
 		except:
 			file = open(BACKUP_LOCATION, "w+")
 			file.write(text)
@@ -53,6 +57,6 @@ def init(new):
 			theta0 = 0
 			theta1 = 0
 			print('Theta values set to default values, theta0 = ' + str(theta0) + ', theta1 = ' + str(theta1))
-			return
-		print('Theta values retrieved, theta0 = ' + str(theta0) + ' $, theta1 = ' + str(theta1) + ' $/km')
+			return theta0, theta1
+		print('Theta values retrieved, theta0 = ' + str(theta0) + ' $/km, theta1 = ' + str(theta1) + ' $')
 		return theta0, theta1
