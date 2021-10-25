@@ -58,5 +58,5 @@ def init(new):
 			theta1 = 0
 			print('Theta values set to default values, theta0 = ' + str(theta0) + ', theta1 = ' + str(theta1))
 			return theta0, theta1
-		print('Theta values retrieved, theta0 = ' + str(theta0) + ' $/km, theta1 = ' + str(theta1) + ' $')
+		print('Theta values retrieved, theta0 = ' + str(theta0) + ' $, theta1 = ' + str(theta1) + ' $/km')
 		return theta0, theta1
