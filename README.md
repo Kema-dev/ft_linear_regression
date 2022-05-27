@@ -39,11 +39,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About the project
 
-<div align="center" style="height:200px; margin-bottom:10%">
-  <a>
-    <img src="images/pair_plot.png" width=300px alt="pair plot">
-  </a>
-</div>
 <!-- TODO Put images from the project here -->
 
 ft_linear_regression is a 42 project, aiming to code a [linear regression](https://en.wikipedia.org/wiki/Linear_regression) algorithm, it is an introduction to machine learning.
