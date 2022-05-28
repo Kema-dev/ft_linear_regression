@@ -49,7 +49,7 @@ You can find complete subject <a href="docs/">here</a>.
 
 ### Built With
 
-* <a href="https://jupyter.org/" target="_blank" title="Jupyter's website">C</a>
+* <a href="https://jupyter.org/" target="_blank" title="Jupyter's website">jupyter</a>
 
 <!-- GETTING STARTED -->
 ## Getting Started
